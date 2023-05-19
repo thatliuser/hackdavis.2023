@@ -1,10 +1,10 @@
 # Test lint Next package
-name: Build package
+name: Lint
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
