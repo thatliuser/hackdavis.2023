@@ -1,4 +1,4 @@
-# Test build Next package
+# Test lint Next package
 name: Build package
 
 on: [push, pull_request]
@@ -12,5 +12,5 @@ jobs:
     - name: Install packages
       run: npm ci
 
-    - name: Build
-      run: npm run build
+    - name: Lint
+      run: npm run lint
