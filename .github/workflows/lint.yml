@@ -1,10 +1,10 @@
-# Test build Next package
-name: Build package
+# Test lint Next package
+name: Lint
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -12,5 +12,5 @@ jobs:
     - name: Install packages
       run: npm ci
 
-    - name: Build
-      run: npm run build
+    - name: Lint
+      run: npm run lint
