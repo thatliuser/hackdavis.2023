@@ -1,9 +1,10 @@
-import { config } from 'dotenv'
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 const backend = process.env["BACKEND_URL"] ?? "localhost"
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const config = {
 	async rewrites() {
 		return [
 			{
@@ -14,4 +15,4 @@ const nextConfig = {
 	}
 }
 
-export default nextConfig
+export default config
