@@ -1,6 +1,6 @@
 import { config } from 'dotenv'
 
-console.log(process.env.BACKEND_URL)
+const backend = process.env["BACKEND_URL"] ?? "localhost"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,6 +8,7 @@ const nextConfig = {
 		return [
 			{
 				source: '/api',
+				destination: backend
 			}
 		]
 	}
