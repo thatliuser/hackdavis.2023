@@ -1,4 +1,4 @@
-const backend = process.env["BACKEND_URL"] ?? "localhost"
+const backend = process.env["BACKEND_URL"] ?? "http://localhost"
 
 /** @type {import('next').NextConfig} */
 const config = {
