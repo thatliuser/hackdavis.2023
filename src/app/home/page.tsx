@@ -1,3 +1,6 @@
+import Api from '@/lib/api'
+import { Account } from 'appwrite'
+
 export default function Home(): JSX.Element {
 	return (
 		<>
