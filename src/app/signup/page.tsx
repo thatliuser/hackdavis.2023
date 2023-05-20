@@ -1,21 +1,25 @@
 'use client'
 
-import Api from '@/lib/api'
+import Api, { uuid } from '@/lib/api'
 import LoginErr from '@/components/error-bar'
 import { useState } from 'react'
 
-type LoginParams = {
-	email: string
+type SignupParams = {
+	email: string,
+	name: string,
 	pass: string
 }
 
-export default function Login(): JSX.Element {
-	async function submit(event: React.FormEvent): Promise<boolean> {
+export default function Signup(): JSX.Element {
+	async function submit(event: React.FormEvent) {
 		event.preventDefault()
 		const form = new FormData(event.target as HTMLFormElement)
-		let login: LoginParams = { email: '', pass: '' }
+		let login: SignupParams = { name: '', email: '', pass: '' }
 		for (const [key, val] of form) {
-			if (key === 'email') {
+			if (key === 'name') {
+				login.name = val.toString()
+			}
+			else if (key === 'email') {
 				login.email = val.toString()
 			}
 			else if (key === 'pass') {
@@ -23,9 +27,9 @@ export default function Login(): JSX.Element {
 			}
 		}
 
-		if (login.email === '' || login.pass === '') {
+		if (login.name === '' || login.email === '' || login.pass === '') {
 			console.log(login)
-			setMsg('Please enter a valid email and password!')
+			setMsg('Please enter a valid uername, email, and password!')
 			setValid(false)
 			return false
 		}
@@ -37,12 +41,13 @@ export default function Login(): JSX.Element {
 		}
 
 		try {
-			const user = await Api.account.createEmailSession(login.email, login.pass)
+			const user = await Api.account.create(uuid(), login.email, login.pass, login.name)
 			console.log(user)
 			setValid(true)
 			location.replace('/home')
 			return true
-		} catch (err) {
+		}
+		catch (err) {
 			console.log(err)
 			setMsg('Something went wrong! Please try again.')
 			setValid(false)
@@ -54,17 +59,18 @@ export default function Login(): JSX.Element {
 	const [msg, setMsg] = useState('')
 
 	return (<>
-		<div className='flex flex-col items-center justify-center h-screen'>
+		<div className='flex items-center justify-center h-screen'>
 			<div className='card bg-base-100 content-center w-5/12'>
 				{valid ? <></> : <LoginErr msg={msg} />}
 				<div className='card-body space-y-3'>
-					<h1 className='card-title'>Login</h1>
+					<h1 className='card-title'>Sign up</h1>
 					<form className='flex flex-col space-y-4' onSubmit={submit}>
+						<input type='text' name='name' placeholder='Username' className='input input-bordered w-full' />
 						<input type='email' name='email' placeholder='Email' className='input input-bordered w-full' />
 						<input type='password' name='pass' placeholder='Password' className='input input-bordered' />
 						<input type='submit' className='btn btn-secondary' value='Go!' />
 					</form>
-					<a href='/signup' className='btn'>No account?</a>
+					<a href='/login' className='btn'>Have an account already?</a>
 				</div>
 			</div>
 		</div>

@@ -10,7 +10,6 @@ export default function Index() {
 			<h2 className='text-2xl'>Make sleeping a habit.</h2>
 			<a className='btn btn-lg mt-10' href='/login'>Get started</a>
 		</div>
-		<Footer />
 	</>
 	)
 }
