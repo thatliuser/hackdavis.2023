@@ -8,7 +8,7 @@ class Api {
 	constructor() {
 		this.client = new Client()
 			.setEndpoint('https://cloud.appwrite.io/v1')
-			.setProject(process.env['NEXT_PUBLIC_PROJECT_ID']!)
+			.setProject('646869cb311ee0e2b240')
 
 		this.account = new Account(this.client)
 		this.db = new Databases(this.client)
