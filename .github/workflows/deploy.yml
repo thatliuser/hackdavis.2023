@@ -13,7 +13,7 @@ jobs:
       run: npm ci
 
     - name: Build
-      run: npm run build
+      run: GITHUB_ACTION=1 npm run build
 
     - uses: actions/upload-pages-artifact@v1.0.7
       with:
