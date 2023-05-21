@@ -19,7 +19,7 @@ Chart.register(
 	Tooltip
 )
 
-export default function LineChart<Key, Val>(props: { data: [Key, Val][], yAxis?: string }): JSX.Element {
+export default function LineChart<Key>(props: { data: [Key, number][], yAxis?: string }): JSX.Element {
 	const yAxis = props.yAxis ?? 'y'
 
 	const opts: ChartOptions<'line'> = {
