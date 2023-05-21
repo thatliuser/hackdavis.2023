@@ -1,9 +1,9 @@
 import { Account } from 'appwrite'
 import { faFire, faIceCream } from '@fortawesome/free-solid-svg-icons'
+import Image from 'next/image'
 import Api from '@/lib/api'
 import Icon from '@/components/icon'
 import Navbar from '@/components/navbar'
-import Image from 'next/image'
 import bg from './night.jpg'
 
 export default function Home(): JSX.Element {
