@@ -1,6 +1,6 @@
 # Drowsy
 ---
-Drowsy is a unique project that combines a webpage and a mobile app to address the common problem of sleep deprivation among university students. Its primary goal is to motivate students to prioritize their sleep and establish healthier sleep habits. By using a gamified approach, Drowsy encourages users to achieve consistent and sufficient sleep durations.
+Drowsy is a unique project that combines a webpage to address the common problem of sleep deprivation among university students. Its primary goal is to motivate students to prioritize their sleep and establish healthier sleep habits. By using a gamified approach, Drowsy encourages users to achieve consistent and sufficient sleep durations.
 ---
 ## Key Features
 - Sleep Tracking: Drowsy integrates with various sleep tracking devices or allows manual input of sleep data to keep track of users' sleep patterns.
