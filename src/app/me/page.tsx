@@ -1,6 +1,7 @@
 'use client'
 
 import Api from '@/lib/api'
+import Navbar from '@/components/navbar'
 import Icon from '@/components/icon'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
@@ -99,6 +100,7 @@ export default function Me(): JSX.Element {
 
 	initUser()
 	return (<>
+		<Navbar />
 		<div className='flex flex-col items-center justify-center h-screen'>
 			<div className='flex flex-col card bg-base-100 content-center w-9/12 space-y-3 py-8 text-center'>
 
@@ -121,7 +123,7 @@ export default function Me(): JSX.Element {
 						</>
 				}
 				<div className='flex justify-center'>
-					<Line options={opts} data={data} width={1000 /* This is SO hacky ew */} height={600 /* Same with this */} />
+					<Line options={opts} data={data} width={1000 /* This is SO hacky ew */} height={550 /* Same with this */} />
 				</div>
 			</div>
 		</div>
