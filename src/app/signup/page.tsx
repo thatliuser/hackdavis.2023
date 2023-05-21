@@ -3,6 +3,8 @@
 import Api, { uuid } from '@/lib/api'
 import LoginErr from '@/components/error-bar'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 type SignupParams = {
 	email: string,
@@ -11,6 +13,7 @@ type SignupParams = {
 }
 
 export default function Signup(): JSX.Element {
+	const router = useRouter()
 	async function submit(event: React.FormEvent) {
 		event.preventDefault()
 		const form = new FormData(event.target as HTMLFormElement)
@@ -44,7 +47,7 @@ export default function Signup(): JSX.Element {
 			const user = await Api.account.create(uuid(), login.email, login.pass, login.name)
 			console.log(user)
 			setValid(true)
-			location.replace('/home')
+			router.push('/home')
 			return true
 		}
 		catch (err) {
@@ -70,7 +73,7 @@ export default function Signup(): JSX.Element {
 						<input type='password' name='pass' placeholder='Password' className='input input-bordered' />
 						<input type='submit' className='btn btn-secondary' value='Go!' />
 					</form>
-					<a href='/login' className='btn'>Have an account already?</a>
+					<Link href='/login' className='btn'>Have an account already?</Link>
 				</div>
 			</div>
 		</div>
