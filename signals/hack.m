@@ -1,3 +1,5 @@
+% Made with love in HackDavis 2023: Drowsy
+
 clear
 clc
 
@@ -48,6 +50,9 @@ x2 = [1:length(y3)];
 plot(x2,y3);
 
 
+locs4 = (locs(3:2:end) - locs(1:2:end-2))/Fs;
+x3  = 1:length(locs4)
+plot(x3,locs4);
 
 
 
