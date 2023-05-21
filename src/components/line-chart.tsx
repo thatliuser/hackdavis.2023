@@ -19,7 +19,9 @@ Chart.register(
 	Tooltip
 )
 
-export default function LineChart(props: { data: [number, number][] }): JSX.Element {
+export default function LineChart<Key, Val>(props: { data: [Key, Val][], yAxis?: string }): JSX.Element {
+	const yAxis = props.yAxis ?? 'y'
+
 	const opts: ChartOptions<'line'> = {
 		backgroundColor: 'rgba(0, 0, 0, 0)',
 		borderColor: 'rgba(255, 255, 255, 255)',
@@ -54,7 +56,7 @@ export default function LineChart(props: { data: [number, number][] }): JSX.Elem
 				},
 				ticks: {
 					padding: 20,
-					maxTicksLimit: 3,
+					maxTicksLimit: 4,
 					font: {
 						size: 25
 					}
@@ -69,7 +71,7 @@ export default function LineChart(props: { data: [number, number][] }): JSX.Elem
 		labels: Array.from(props.data.values()).map(([key, val]) => key),
 		datasets: [
 			{
-				label: 'Points',
+				label: props.yAxis,
 				data: Array.from(props.data.values()).map(([key, val]) => val),
 				pointBackgroundColor: pt,
 				pointBorderColor: pt,
