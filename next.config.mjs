@@ -5,7 +5,11 @@ const isGhPages = process.env["GITHUB_ACTION"] ? true : false
 const deployConfig = {
 	output: 'export',
 	basePath: '/hackdavis.2023',
-	assetPrefix: '/hackdavis.2023'
+	assetPrefix: '/hackdavis.2023',
+	images: {
+		loader: 'akamai',
+		path: ''
+	}
 }
 
 /** @type {import('next').NextConfig} */
