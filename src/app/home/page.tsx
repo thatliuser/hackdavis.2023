@@ -2,12 +2,12 @@
 
 import { Account } from 'appwrite'
 import { faClock, faFire, faUser, faMoon, faDollarSign } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
+import { faBell } from '@fortawesome/free-solid-svg-icons'
 import Api from '@/lib/api'
 import Icon from '@/components/icon'
 import Navbar from '@/components/navbar'
 import LineChart from '@/components/line-chart'
-import { useState } from 'react'
-import { faBell } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home(): JSX.Element {
 	const hour = new Date(Date.now()).getHours()
