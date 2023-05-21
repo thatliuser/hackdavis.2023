@@ -75,7 +75,7 @@ export default function Friends() {
 											</div>
 										</div>
 										<div>
-											<div className='font-bold'>J_Jon</div>
+											<div className='font-bold'>Jonathan</div>
 
 										</div>
 									</div>
