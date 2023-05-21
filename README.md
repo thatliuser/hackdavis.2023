@@ -6,6 +6,13 @@ Drowsy is a project aimed towards sleep-derived college students (like the autho
 encouraging them to start and maintain healthy sleep schedules by incentivizing
 behavior through a fun reward system and detailed statistics about your sleep.
 
+## Problem Statement 📋
+- Prevalent sleep deprivation and poor sleep schedules among university students
+- Negative impact on academic performance and overall well-being
+- Lack of personalized and effective solutions for better change
+- Need for a user-centric web app to educate, guide, and motivate students
+- Our solution, Drowsy, aims to empower students to prioritize sleep and excel academically
+
 ## Planned Features 🌙
 - Streaks: Drowsy rewards users with streaks, similar to other popular applications like Duolingo and Snapchat, to keep users on track.
 - Tracking: Drowsy integrates with various sleep tracking devices to help users gain insight into their daily sleep patterns.
