@@ -71,7 +71,7 @@ export default function Home(): JSX.Element {
 					</div>
 					<div className='flex card text-left bg-neutral-focus'>
 						<div className='card-body'>
-							<h2 className='text-xl'><div className='space-x-15'><Icon icon={faMoon} /> Keep your 8 day streak going: sleep by <span className='text-lime-500'>11:30 PM</span> today!</div></h2>
+							<h2 className='text-xl'><div className='space-x-15'><Icon icon={faMoon} /> Keep your 8 day streak going: sleep by <span className='text-lime-500'>11:30 PM</span>!</div></h2>
 						</div>
 					</div>
 					<div className='flex card text-left bg-neutral-focus'>
