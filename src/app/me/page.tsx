@@ -2,35 +2,10 @@
 
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
-import { Inter } from 'next/font/google'
-import {
-	CategoryScale,
-	Chart,
-	ChartData,
-	ChartOptions,
-	LineElement,
-	LinearScale,
-	PointElement,
-	Tooltip
-} from 'chart.js'
-import { Line } from 'react-chartjs-2'
 import Icon from '@/components/icon'
+import LineChart from '@/components/line-chart'
 import Navbar from '@/components/navbar'
 import Api from '@/lib/api'
-
-Chart.register(
-	LineElement,
-	PointElement,
-	LinearScale,
-	CategoryScale,
-	Tooltip
-)
-
-const inter = Inter({ subsets: ['latin'] })
-Chart.defaults.backgroundColor = 'rgba(0, 0, 0, 0)'
-Chart.defaults.borderColor = 'rgba(255, 255, 255, 255)'
-Chart.defaults.font.size = 20
-Chart.defaults.color = '#748aad'
 
 export default function Me(): JSX.Element {
 	async function initUser() {
@@ -45,58 +20,6 @@ export default function Me(): JSX.Element {
 	}
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
-
-	const opts: ChartOptions<'line'> = {
-		maintainAspectRatio: false,
-		responsive: false,
-		scales: {
-			x: {
-				grid: {
-					display: false
-				},
-				border: {
-					display: false
-				},
-				ticks: {
-					padding: 20,
-					font: {
-						size: 25
-					}
-				}
-			},
-			y: {
-				grid: {
-					color: '#273449',
-					lineWidth: 3,
-				},
-				border: {
-					display: false
-				},
-				ticks: {
-					padding: 20,
-					maxTicksLimit: 3,
-					font: {
-						size: 25
-					}
-				},
-			}
-		}
-	}
-
-	const data: ChartData<'line'> = {
-		labels: [0, 1, 2, 3],
-		datasets: [
-			{
-				label: 'my data',
-				data: [1, 3, 5, 6],
-				pointBackgroundColor: '#b5cdf5',
-				pointBorderColor: '#b5cdf5',
-				pointRadius: 8,
-				borderWidth: 7,
-				borderColor: '#b5cdf5'
-			}
-		]
-	}
 
 	initUser()
 	return (<>
@@ -122,9 +45,7 @@ export default function Me(): JSX.Element {
 							<h2 className='text-3xl text-neutral-content'>{email}</h2>
 						</>
 				}
-				<div className='flex justify-center'>
-					<Line options={opts} data={data} width={1000 /* This is SO hacky ew */} height={550 /* Same with this */} />
-				</div>
+				<LineChart data={[[1, 1], [2, 4], [3, 8], [4, 0]]} />
 			</div>
 		</div>
 	</>)
