@@ -15,12 +15,12 @@ behavior through a fun reward system and detailed statistics about your sleep.
 Drowsy aims to improve the lives of many a sleep-deprived student, helping them maintain healthier lifestyles through
 comprehensive analysis, tracking, and streak setting!
 
-## Tech stack
+## Tech stack 💻
 - [Next.js](https://nextjs.org/)
 - [Appwrite](https://appwrite.io/)
 - [GitHub pages](https://pages.github.com/)
 
-## Visuals
+## Visuals 🔥
 ![Homepage](./docs/drowsy-home.png)
 ![Profile](./docs/drowsy-profile.png)
 ![Login](./docs/drowsy-login.png)
