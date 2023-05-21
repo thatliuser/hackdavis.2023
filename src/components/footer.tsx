@@ -1,5 +1,5 @@
-import Icon from './icon'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import Icon from './icon'
 
 export default function Footer(): JSX.Element {
 	return (

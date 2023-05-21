@@ -1,7 +1,7 @@
-import Api from '@/lib/api'
 import { Account } from 'appwrite'
-import Icon from '@/components/icon'
 import { faFire, faUser } from '@fortawesome/free-solid-svg-icons'
+import Api from '@/lib/api'
+import Icon from '@/components/icon'
 import Navbar from '@/components/navbar'
 
 export default function Home(): JSX.Element {

@@ -1,10 +1,10 @@
 'use client'
 
-import Api, { uuid } from '@/lib/api'
-import LoginErr from '@/components/error-bar'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import LoginErr from '@/components/error-bar'
+import Api, { uuid } from '@/lib/api'
 
 type SignupParams = {
 	email: string,

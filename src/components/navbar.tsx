@@ -1,11 +1,11 @@
 'use client'
 
-import Icon from './icon'
-import StoreIcon from './store-icon'
-import { faFire, faPeopleArrows, faDollarSign, faStar, faRightFromBracket, faUser, faCog } from '@fortawesome/free-solid-svg-icons'
-import Api from '@/lib/api'
+import { faCog, faDollarSign, faFire, faPeopleArrows, faRightFromBracket, faStar, faUser } from '@fortawesome/free-solid-svg-icons'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import Icon from './icon'
+import StoreIcon from './store-icon'
+import Api from '@/lib/api'
 
 
 

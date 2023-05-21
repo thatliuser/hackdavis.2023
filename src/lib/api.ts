@@ -1,4 +1,4 @@
-import { Client, Account, Databases, ID } from 'appwrite'
+import { Account, Client, Databases, ID } from 'appwrite'
 
 class Api {
 	client: Client

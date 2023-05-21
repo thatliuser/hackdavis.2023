@@ -1,22 +1,22 @@
 'use client'
 
-import Api from '@/lib/api'
-import Navbar from '@/components/navbar'
-import Icon from '@/components/icon'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import { Inter } from 'next/font/google'
 import {
-	Chart,
-	PointElement,
-	LinearScale,
 	CategoryScale,
-	LineElement,
-	Tooltip,
+	Chart,
+	ChartData,
 	ChartOptions,
-	ChartData
+	LineElement,
+	LinearScale,
+	PointElement,
+	Tooltip
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
+import Icon from '@/components/icon'
+import Navbar from '@/components/navbar'
+import Api from '@/lib/api'
 
 Chart.register(
 	LineElement,

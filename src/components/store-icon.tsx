@@ -1,5 +1,5 @@
-import Icon from './icon'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import Icon from './icon'
 
 export default function StoreIcon() {
 	return (<>

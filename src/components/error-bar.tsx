@@ -1,6 +1,6 @@
 // Login error bar
-import Icon from './icon'
 import { faWarning } from '@fortawesome/free-solid-svg-icons'
+import Icon from './icon'
 
 export default function ErrorBar(props: { msg: string }): JSX.Element {
 	return (<>

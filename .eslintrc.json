@@ -1,5 +1,8 @@
 {
   "extends": "next/core-web-vitals",
+  "plugins": [
+    "import"
+  ],
   "rules": {
     "semi": [
       "error",
@@ -8,6 +11,21 @@
     "quotes": [
       "error",
       "single"
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ],
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "sibling"
+          }
+        ]
+      }
     ]
   }
 }
