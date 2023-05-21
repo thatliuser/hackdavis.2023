@@ -11,8 +11,9 @@ import LineChart from '@/components/line-chart'
 
 export default function Home(): JSX.Element {
 	const hour = new Date(Date.now()).getHours()
+	console.log(hour)
 	let greeting: String
-	if (hour > 9 || hour < 5) {
+	if (hour > 21 || hour < 5) {
 		greeting = 'Good night'
 	}
 	else if (hour >= 5 && hour < 10) {
