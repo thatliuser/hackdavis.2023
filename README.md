@@ -1,6 +1,6 @@
 # Drowsy ⭐
 
-Catch those Zzzs.
+[Catch those Zzzs.](https://thatliuser.github.io/hackdavis.2023/)
 
 Drowsy is a project aimed towards sleep-derived college students (like the authors!),
 encouraging them to start and maintain healthy sleep schedules by incentivizing
